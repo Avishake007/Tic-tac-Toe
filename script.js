@@ -1,6 +1,22 @@
+let a=document.getElementById("mypic");
+let c=document.getElementById("name");
+document.getElementById("mypic").addEventListener('mouseover',hide);
+function hide(){
+	a.style.display="none";
+	c.style.display="block";
+}
+document.getElementById("mypic").addEventListener('mouseout',show);
+function show(){
+	a.style.display="block";
+	c.style.display="none";
+}
 var origBoard;
+
+// Representing Human Player as 'O' while AI Player as 'X'
 const huPlayer = 'O';
 const aiPlayer = 'X';
+
+// Possible winnning combinations
 const winCombos = [
 	[0, 1, 2],
 	[3, 4, 5],
@@ -11,24 +27,41 @@ const winCombos = [
 	[0, 4, 8],
 	[6, 4, 2]
 ]
+
+//Getting access to startscreen,board,endgame and cell classes
 const start = document.querySelector('.startscreen');
 const boar = document.querySelector('.board');
 const endl = document.querySelector('.endgame');
-
 const cells = document.querySelectorAll('.cell');
+const third=document.querySelector('.third');
 // end.classList.remove('hide')
+
+// Calling the check function
 check();
 
+// Check function hides all the classes except startGame
 function check(){
 	endl.style.display='none';
+	// third.classList.add('hide');
+
 	start.classList.remove('hide')
 	boar.classList.add('hide');
 	
+	third.style.backgroundImage="url('images/tic.png')";
+	third.classList.add('third');
+	third.style.backgroundRepeat="no-repeat";
+	third.style.backgroundSize="cover";
+	// Calls the startGame function when clicked
 	start.addEventListener("click", startGame);
 }
+
+// It hides the startGame while appear the board
 function startGame() {
-	start.classList.add('hide')
+	start.classList.add('hide');
 	boar.classList.remove('hide');
+	third.style.background="black";
+	// third.classList.add('hide');
+	// third.style.color="white";
 	document.querySelector(".endgame").style.display = "none";
 	origBoard = Array.from(Array(9).keys());
 	for (var i = 0; i < cells.length; i++) {
@@ -37,6 +70,7 @@ function startGame() {
 		cells[i].addEventListener('click', turnClick, false);
 	}
 }
+
 
 function turnClick(square) {
 	if (typeof origBoard[square.target.id] == 'number') {
