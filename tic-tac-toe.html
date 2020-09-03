@@ -5,10 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 733px)" href="phone.css">
+
 </head>
 <body>
-    <h1>TIC TAC TOE</h1>
-    <div>
+
+    <!--Navigation Bar-->
+    <nav id="navbar">
+        <div id="logo">
+            <img src="images/logo1.png" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item" ><a href="#home" id="active">Home</a></li>
+            <li class="item"><a href="#about">About</a></li>
+            <li class="item"><a href="#play">Play</a></li>
+            <!-- <li class="item"><a href="#contact">Contact Us</a></li> -->
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <div class="first" id="home">
+       
+    <!-- <h2> Welcome to <b>TIC TAC TOE </b>Point</h2> -->
+    <!-- <p> Created By</p> -->
+    <img src="images/tictac.png" id="tic">
+    <img src="gif/g.gif" id="gif">
+    <img src="images/my_pic.jpg" alt="Author's photo" id="mypic">
+    <img src="images/myname.png" alt="Creator's Name" id="name">
+    </div>
+
+    <!-- About -->
+    <div class="second" id="about">
+        <h2 id="about">About</h2>
+        <div>
+        <div>Play</div>
+        <div>Enjoy</div>
+        <div>Wanna Know More about the Algorithm?
+            <a href="https://en.wikipedia.org/wiki/Minimax" target="_blank">Click here</a>
+        </div>
+        </div>
+    </div>
+
+    <!-- Play Section -->
+    <div class="third" id="play">
         <div class="startscreen hide">
             <p>Click here to start</p>
         </div>
@@ -36,5 +75,6 @@
     <script src="script.js"></script>
     <!-- <button onClick="startGame()">Replay</button> -->
     </div>
+    
 </body>
 </html>
