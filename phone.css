@@ -1,0 +1,63 @@
+/* Navbar section */
+nav{
+    flex-direction: column;
+    height: 83px;
+}
+nav #logo img{
+    margin-top: -10px;
+}
+nav ul{
+    /* flex-direction: column; */
+    text-align:center;
+    margin-top: -21px;
+
+}
+li a{
+    font-size: 14px;
+    padding:26px;
+}
+nav ul li{
+    margin:0;
+    margin-top:14px;
+}
+
+/* Home section */
+.first{
+    padding:0;
+}
+.first::before{
+    min-width: 18rem;
+
+}
+
+#tic{
+    height: 7rem;
+}
+
+/* About section */
+.second div{
+    display: flex;
+    flex-direction: column;
+}
+.second>div div{
+    width:14rem;
+    font-size: 23px;
+}
+.second{
+    height: 139vh;
+    min-width:18rem
+}
+
+/* Play section */
+.third{
+    min-height: 42rem;
+    min-width:18rem;
+}
+td{
+    height: 9rem;
+    width: 5rem;
+}
+.endgame{
+    height: 4rem;
+    width: 13rem;
+}
