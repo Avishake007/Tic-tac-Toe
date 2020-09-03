@@ -56,7 +56,20 @@ li a:hover{
     /* color:rgb(241, 149, 88); */
     /* background-color: lightgray; */
 }
-
+nav p{
+    color: white;
+    /* color:black; */
+    font-weight: bold;
+    /* padding: 0 0px 0px 0px; */
+    padding-top: 8px;
+    font-size: 12px;
+    margin-left: -22px;
+    height:0;
+    padding-top:25px;
+}
+.logo4{
+    display:flex;
+}
 /* Home Section */
 .first{
     display: flex;
