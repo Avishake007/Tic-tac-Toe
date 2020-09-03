@@ -1,10 +1,191 @@
-body{
-    background-image: url('tic.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* opacity: 0.7; */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,500&display=swap');
+/* Reset */
+*{
+    padding:0;
+    margin:0;
+}
+
+/* Html */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navbar section */
+#navbar{
+    position:absolute;
+    top:0;
+    display: flex;
+    background: black;
+    /* background: transparent; */
+    align-items: center;
+    border-radius: 14px;
+    width: 100%;
     
 }
+nav #logo img{
+    height: 31px;
+    width: 38px;
+    padding: 19px 23px;
+    filter: invert(1);
+    /* filter: invert(0); */
+}
+ul
+{
+    display: flex;
+    list-style-type: none;
+    padding: 0 14px;
+
+}
+li a{
+    color:white;
+    /* color: black; */
+    padding: 0px 54px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+li a#active
+{
+    color:yellow;
+}
+li a:hover{
+    /* background-color: rgb(10, 10, 100) ; */
+    color:rgb(78, 221, 78);
+    /* color:rgb(241, 149, 88); */
+    /* background-color: lightgray; */
+}
+
+/* Home Section */
+.first{
+    display: flex;
+    flex-direction: column;
+    /* padding:3px 200px; */
+    height: 752px;
+    justify-content: center;
+    align-items: center;
+}
+.first::before{
+    /* display: flex;
+    flex-direction: column; */
+    content: "";
+    background-image: url(images/my_pic1.jpg);
+    position: absolute;
+    opacity: 0.70;
+    height:648px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 115vh;
+    background-attachment: fixed;
+    z-index: -1;
+    
+}
+
+#tic {
+    height:10rem;
+}
+
+/* About Section */
+.second{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin:auto;
+    background: bisque;
+    width:100%;
+    height:61vh;
+}
+ .second div{
+    display: flex;
+
+    /* flex-direction: column; */
+    /* padding:3px 200px;
+    height: 759px;
+    justify-content: center;
+    align-items: center; */
+}
+.second>div div{
+    background: lightblue;
+    border: 2px solid black;
+    border-radius: 22px;
+    height: 38vh;
+    width: 25vw;
+    margin: auto;
+    margin-bottom: 47px;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    /* margin: auto; */
+}
+/*
+.second::before{
+    /* display: flex;
+    flex-direction: column; */
+    /* content: "";
+    background-image: url(mypic2.jpg);
+    position: absolute;
+    opacity: 0.70;
+    height:648px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 103vh;
+    background-attachment: fixed;
+    z-index: -1; */
+    
+/* } */ 
+
+#about{
+    color: black;
+    margin: auto;
+    /* margin-bottom: 14px; */
+}
+
+#mypic {
+    /* position: absolute; */
+    border-radius: 50%;
+    height:115px;
+    cursor: pointer;
+}
+/* #mypic:hover{
+    opacity:0;
+    background-image: url('myname.png');
+    opacity:1;
+
+} */
+#gif{
+    /* border-radius: 50%; */
+    margin-bottom: 21px;
+}
+#name{
+    display: none;
+    height:61px;
+}
+
+/* Play section */
+.third{
+    background:black;
+    background-image: url(images/tic.png);
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 103vh;
+    
+}
+
 .hide{
     display: none;
 }
@@ -18,6 +199,7 @@ div .startscreen {
     linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
     linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
     background-color: lightblue;
+    
     opacity: 0.7;
     font-weight: bold;
     left:50%;
@@ -48,12 +230,13 @@ div .startscreen {
 .startscreen:hover{
     opacity:0.6;
 }
-h1{
-    position: absolute;
-    left: 43%;
-    top: -11px;
-    color: white;
+h2{
+    /* position: absolute; */
+    /* left: 43%; */
+    /* top: 17px; */
+    color:white;
     font-size: 32px;
+    margin-bottom: 69px;
 }
 .cell:hover{
     background-color: lightgreen;
@@ -62,9 +245,9 @@ h1{
 }
 
 td{
-    border:4px solid black;
-    height:100px;
-    width:100px;
+    border:4px solid white;
+    height: 140px;
+    width: 111px;
     text-align:center;
     vertical-align: middle;
     font-family: "Comic Sans MS";
@@ -75,6 +258,7 @@ table{
     border-collapse: collapse;
     position: absolute;
     left:50%;
+    color:white;
     margin-left: -155px;
     top: 94px;
 }
@@ -98,16 +282,18 @@ table tr td:last-child{
 .endgame{
     /* display: none; */
     cursor: pointer;
-    width: 200px;
-    top: 120px;
+    /* width: 200px; */
+    height: 177px;
+    width: 359px;
+    top: 177px;
     background-color: rgba(204,133,63,0.8);
     position: absolute;
-    left: 50%;
+    left: 46%;
     margin-left: -100px;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     border-radius: 5px;
-    color:white;
+    color: white;
     font-size: 2em;
 }
